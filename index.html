@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>健康证查询</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft Yahei", sans-serif;
+            background-color: #e9e9e9;
+            padding: 10px;
+        }
+        .cert-container {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        .cert-module {
+            background: #f8f8f8;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.35);
+            width: 100%;
+            height: 180px;
+        }
+        .top-card {
+            font-size: 11px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .top-title {
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex: 1;
+        }
+        .text-container {
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .info-line {
+            margin-bottom: 8px;
+            white-space: nowrap;
+        }
+        .id-group {
+            margin-bottom: 8px;
+        }
+        .id-group .info-line {
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+        .last-line {
+            margin-top: auto;
+            margin-bottom: 10px;
+        }
+        .photo {
+            width: 70px;
+            height: 90px;
+            border: 1px solid #ddd;
+            margin-left: 10px;
+        }
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .middle-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            width: 100%;
+            height: 180px;
+            font-weight: bold;
+        }
+        .middle-line {
+            margin: 5px 0;
+        }
+        .bottom-card {
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            font-size: 11px;
+            text-align: center;
+        }
+        .qrcode-area {
+            text-align: center;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .qrcode-img {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 10px;
+        }
+        .qrcode-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .qrcode-title {
+            color: #333;
+            margin-bottom: 0;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .notice {
+            background-color: #fffbeb;
+            border: 1px solid #ffeeba;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 10px;
+        }
+        .notice-title {
+            color: #856404;
+            font-weight: bold;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+        }
+        .exclamation-icon {
+            margin-right: 5px;
+            font-size: 12px;
+            background-color: yellow;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #856404;
+        }
+        .notice-content {
+            color: #856404;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="cert-container">
+        <div class="cert-module top-card">
+            <div class="top-title">广东省食品从业人员健康证明</div>
+            <div class="top-content">
+                <div class="text-container">
+                    <div class="info-line">
+                        <span>姓 名   :</span><span style="font-weight: bold; margin-left: 5px;">潘启杰</span>
+                        <span style="margin-left: 15px;">性 别   :</span><span style="font-weight: bold; margin-left: 5px;">男</span>
+                    </div>
+                    <div class="id-group">
+                        <div class="info-line">
+                            <span>身份证号码   :</span><span style="font-weight: bold; margin-left: 5px;">450421200209268512</span>
+                        </div>
+                        <div class="info-line">(或其它有效证明)</div>
+                    </div>
+                    <div class="info-line">
+                        <span>体检单位   :</span><span style="font-weight: bold; margin-left: 5px;">广州东仁医院</span>
+                    </div>
+                    <div class="info-line last-line">
+                        <span>体检日期   :</span><span style="font-weight: bold; margin-left: 5px;">2025年10月23日 (有效期一年)</span>
+                    </div>
+                </div>
+                <div class="photo">
+                    <img src="./one.jpg" alt="持证人照片">
+                </div>
+            </div>
+        </div>
+        <div class="cert-module middle-card">
+            <div class="middle-line">广东省食品从业人员</div>
+            <div class="middle-line">健康证明</div>
+        </div>
+        <div class="bottom-card">
+            <div class="qrcode-area">
+                <div class="qrcode-img">
+                    <img src="./two.png" alt="防伪二维码">
+                </div>
+                <div class="qrcode-title">此健康信息已上报平台</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

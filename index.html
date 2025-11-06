@@ -58,6 +58,19 @@
         .info-line {
             margin-bottom: 8px;
             white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 1px; /* 改为1px，冒号左右间距均为1px */
+        }
+        .label {
+        }
+        .colon {
+        }
+        .content {
+            font-weight: bold;
+        }
+        .gender-separator {
+            margin-left: 10px; /* 姓名和性别之间的间距保持不变 */
         }
         .id-group {
             margin-bottom: 8px;
@@ -165,29 +178,31 @@
             <div class="top-content">
                 <div class="text-container">
                     <div class="info-line">
-                        <span>姓 名   :</span>
-                        
-<span style="font-weight: bold; margin-left: 5px;">杰</span>
-                        
-                        <span style="margin-left: 15px;">性 别   :</span>
-                        
-<span style="font-weight: bold; margin-left: 5px;">男</span>
-                        
+                        <span class="label">姓 名</span>
+                        <span class="colon">∶</span>
+                        <span class="content">符思波</span>
+                        <span class="gender-separator"></span>
+                        <span class="label">性 别</span>
+                        <span class="colon">∶</span>
+                        <span class="content">男</span>
                     </div>
                     <div class="id-group">
                         <div class="info-line">
-                            <span>身份证号码   :</span>
-                            
-<span style="font-weight: bold; margin-left: 5px;">450421200209268512</span>
-                            
+                            <span class="label">身份证号码</span>
+                            <span class="colon">∶</span>
+                            <span class="content">43312219990816701X</span>
                         </div>
                         <div class="info-line">(或其它有效证明)</div>
                     </div>
                     <div class="info-line">
-                        <span>体检单位   :</span><span style="font-weight: bold; margin-left: 5px;">广州东仁医院</span>
+                        <span class="label">体检单位</span>
+                        <span class="colon">∶</span>
+                        <span class="content">广州东仁医院</span>
                     </div>
                     <div class="info-line last-line">
-                        <span>体检日期   :</span><span style="font-weight: bold; margin-left: 5px;">2025年10月23日 (有效期一年)</span>
+                        <span class="label">体检日期</span>
+                        <span class="colon">∶</span>
+                        <span class="content">2025年11月6日 (有效期一年)</span>
                     </div>
                 </div>
                 <div class="photo">
